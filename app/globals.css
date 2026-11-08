@@ -1,0 +1,383 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap');
+
+:root {
+  --coffee-dark: #35251d;
+  --coffee-brown: #76543b;
+  --coffee-light: #f8f3ec;
+  --coffee-cream: #eee4d6;
+  --coffee-text: #59483c;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 85px;
+}
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  color: var(--coffee-text);
+  background: var(--coffee-light);
+}
+
+.coffee-navbar {
+  background: #f8f3ec;
+  padding: 18px 0;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+  z-index: 1000;
+}
+
+.coffee-brand {
+  font-family: 'Playfair Display', serif;
+  font-size: 25px;
+  font-weight: 700;
+  color: var(--coffee-dark) !important;
+  letter-spacing: 2px;
+}
+
+.coffee-brand span,
+.footer span {
+  color: #a8794e;
+}
+
+.coffee-navbar .nav-link {
+  color: #59483c;
+  font-weight: 600;
+  margin: 0 10px;
+  transition: 0.3s;
+}
+
+.coffee-navbar .nav-link:hover,
+.coffee-navbar .nav-link.menu-active {
+  color: #a8794e !important;
+}
+
+.coffee-navbar .nav-link.menu-active {
+  border-bottom: 2px solid #a8794e;
+}
+
+.navbar-order,
+.hero-button,
+.dark-button {
+  display: inline-block;
+  background: var(--coffee-dark);
+  color: white;
+  text-decoration: none;
+  padding: 12px 25px;
+  border-radius: 4px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.navbar-order:hover,
+.hero-button:hover,
+.dark-button:hover {
+  background: #a8794e;
+  color: white;
+}
+
+.hero-slide {
+  height: 620px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(25, 16, 11, 0.78),
+    rgba(25, 16, 11, 0.12)
+  );
+}
+
+.hero-caption {
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  right: 10%;
+  bottom: auto;
+  transform: translateY(-50%);
+  text-align: left;
+  z-index: 2;
+}
+
+.hero-label,
+.section-label {
+  color: #b68b61;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 3px;
+}
+
+.hero-caption h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(36px, 5vw, 65px);
+  font-weight: 700;
+  max-width: 650px;
+  margin: 18px 0;
+}
+
+.hero-caption p {
+  font-size: 17px;
+  max-width: 520px;
+  line-height: 1.8;
+  margin-bottom: 30px;
+}
+
+.hero-button {
+  background: #a8794e;
+}
+
+.section-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 42px;
+  font-weight: 700;
+  color: var(--coffee-dark);
+  margin: 15px 0;
+}
+
+.section-description {
+  color: #76675c;
+  line-height: 1.9;
+  font-size: 15px;
+}
+
+.section-heading {
+  text-align: center;
+  max-width: 650px;
+  margin: 0 auto 45px;
+}
+
+.about-section {
+  padding: 100px 0;
+  background: #f8f3ec;
+}
+
+.about-image {
+  width: 100%;
+  height: 430px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.dark-button {
+  margin-top: 15px;
+}
+
+.menu-section {
+  padding: 100px 0;
+  background: #eee4d6;
+}
+
+.product-card {
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  height: 100%;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+  transition: 0.3s;
+}
+
+.product-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.12);
+}
+
+.product-image {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+}
+
+.product-content {
+  padding: 25px;
+}
+
+.product-content h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 24px;
+  color: var(--coffee-dark);
+}
+
+.product-content p {
+  font-size: 14px;
+  color: #85766b;
+  line-height: 1.7;
+  margin: 12px 0 20px;
+}
+
+.product-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+.product-bottom span {
+  color: #a8794e;
+  font-weight: 700;
+}
+
+.product-bottom a {
+  color: var(--coffee-dark);
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.why-section {
+  padding: 100px 0;
+  background: #f8f3ec;
+}
+
+.why-card {
+  background: white;
+  padding: 40px 25px;
+  text-align: center;
+  height: 100%;
+  border-radius: 8px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.04);
+  transition: 0.3s;
+}
+
+.why-card:hover {
+  transform: translateY(-6px);
+}
+
+.why-icon {
+  font-size: 42px;
+  color: #a8794e;
+  margin-bottom: 20px;
+}
+
+.why-card h3 {
+  font-family: 'Playfair Display', serif;
+  color: var(--coffee-dark);
+  font-size: 23px;
+  margin-bottom: 15px;
+}
+
+.why-card p {
+  color: #85766b;
+  line-height: 1.8;
+}
+
+.contact-section {
+  background: var(--coffee-dark);
+  color: white;
+  padding: 100px 20px;
+  text-align: center;
+}
+
+.contact-section h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 42px;
+  margin: 20px 0;
+}
+
+.contact-section p {
+  color: #d6c7b8;
+  line-height: 1.8;
+}
+
+.contact-info {
+  margin: 25px 0;
+}
+
+.footer {
+  background: #241812;
+  color: white;
+  text-align: center;
+  padding: 40px 15px;
+}
+
+.footer h3 {
+  font-family: 'Playfair Display', serif;
+  letter-spacing: 3px;
+}
+
+.footer p {
+  color: #c7b5a5;
+  margin: 12px 0 25px;
+}
+
+.footer small {
+  color: #b5a496;
+}
+
+.footer-line {
+  border-top: 1px solid #59483c;
+  margin: 20px 0;
+}
+
+@media (max-width: 991px) {
+  .coffee-navbar .nav-link {
+    margin: 8px 0;
+  }
+
+  .coffee-navbar .nav-link.menu-active {
+    border-bottom: none;
+    border-left: 3px solid #a8794e;
+    padding-left: 12px;
+  }
+
+  .navbar-order {
+    margin: 10px 0;
+    text-align: center;
+    width: fit-content;
+  }
+
+  .hero-slide {
+    height: 520px;
+  }
+
+  .about-section,
+  .menu-section,
+  .why-section {
+    padding: 75px 0;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-slide {
+    height: 430px;
+  }
+
+  .hero-caption {
+    left: 9%;
+    right: 9%;
+  }
+
+  .hero-caption h1 {
+    font-size: 35px;
+  }
+
+  .hero-caption p {
+    font-size: 14px;
+  }
+
+  .section-title {
+    font-size: 32px;
+  }
+
+  .about-image {
+    height: 280px;
+  }
+
+  .contact-section h2 {
+    font-size: 32px;
+  }
+
+  .about-section,
+  .menu-section,
+  .why-section {
+    padding: 60px 0;
+  }
+}
